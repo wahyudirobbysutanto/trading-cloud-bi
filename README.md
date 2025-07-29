@@ -21,12 +21,17 @@ This project reflects core cloud skills often required in data roles:
 - SSMS (SQL Server Management Studio)
 - Power BI Desktop
 
-## 🧠 What You’ll Learn
+## 🏛️ Architecture
 
-- How to spin up and configure a public AWS RDS SQL Server instance
-- How to migrate a local database to RDS using SSMS Import Wizard
-- How to connect Power BI to RDS for visualization
-- How to build filtered charts and summary dashboards in Power BI
+This project follows a simple, yet effective, cloud data workflow:
+
+`[Local SQL Server DB] ---> [SSMS Import/Export Wizard] ---> [AWS RDS Instance] <--- [Power BI Desktop]`
+
+## 💡 Key Capabilities Demonstrated
+
+- Cloud Database Provisioning: Successfully configured and deployed a public-facing AWS RDS instance, including networking and security group setup.
+- Data Migration: Executed a database migration from an on-premise environment to AWS Cloud using standard industry tools (SSMS).
+- Cloud BI Integration: Established a direct connection from a leading BI tool (Power BI) to a cloud database, enabling real-time data analysis.
 
 ## 📁 Project Structure
 
@@ -44,6 +49,13 @@ This project reflects core cloud skills often required in data roles:
 │   ├── schema.sql                # SQL Script of the table and schema that used
 └── README.md
 ```
+
+## ⚙️ Replication Steps
+
+1.  **Provision AWS RDS:** Create a new SQL Server instance on AWS RDS (Free Tier eligible). Configure the security group to allow inbound traffic from your local IP address.
+2.  **Deploy Schema:** Use the `schema.sql` script in the `/sql` folder to create the table structure in the new RDS database.
+3.  **Migrate Data:** Use the SSMS Import/Export Wizard to move data from a local SQL Server source to the target RDS instance.
+4.  **Connect Power BI:** Open `dashboard.pbix`. Edit the data source credentials to point to your new AWS RDS endpoint.
 
 ## 📊 Power BI Dashboard Overview
 
